@@ -1,0 +1,13 @@
+{
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"compilerOptions": {
+		"strictNullChecks": true
+	},
+	"rules": {
+		"interface-name": [false],
+		"prefer-for-of": false,
+		"unified-signatures": false,
+		"one-variable-per-declaration": false,
+		"object-literal-sort-keys": false
+	}
+}
