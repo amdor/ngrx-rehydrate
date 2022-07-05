@@ -19,7 +19,7 @@
         "url": "git+https://github.com/amdor/ngrx-rehydrate.git"
     },
     "keywords": [
-        "matroid"
+        "rehydration", "ngrx", "createreducer"
     ],
     "author": "ZsoltD",
     "license": "MIT",
