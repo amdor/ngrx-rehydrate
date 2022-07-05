@@ -1,3 +1,3 @@
 export interface RehydrateRecucerConfig {
-    key: string
+    key: string;
 }
