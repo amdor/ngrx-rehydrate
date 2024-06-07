@@ -2,11 +2,11 @@ import { Action, ActionCreator, ActionReducer, ActionType, createReducer, Reduce
 import { OnReducer } from '@ngrx/store/src/reducer_creator';
 import { RehydrateRecucerConfig } from './model';
 
-export function createRehydrateReducer<S, A extends Action = Action>(
+export function createRehydrateReducer<S, A extends Action = Action, R extends ActionReducer<S, A> = ActionReducer<S, A>>(
     config: RehydrateRecucerConfig,
     initialState: S,
     ...ons: ReducerTypes<S, ActionCreator[]>[]
-): ActionReducer<S, A> {
+): R {
     const { key } = config;
     const item = localStorage.getItem(key);
     const newInitialState = (item && JSON.parse(item)) ?? initialState;
@@ -20,5 +20,5 @@ export function createRehydrateReducer<S, A extends Action = Action>(
         };
         newOns.push({ ...oldOn, reducer: newReducer });
     });
-    return createReducer(newInitialState, ...newOns);
+    return createReducer<S, A, R>(newInitialState, ...newOns);
 }

@@ -12,7 +12,13 @@ export const exampleReducer = createRehydrateReducer(
 );
 ```
 
-`function createRehydrateReducer<S, A extends Action = Action>( config: RehydrateRecucerConfig, initialState: S, ...ons: ReducerTypes<S, ActionCreator[]>[] ): ActionReducer<S, A>`
+```typescript
+function createRehydrateReducer<S, A extends Action = Action, R extends ActionReducer<S, A> = ActionReducer<S, A>>(
+    config: RehydrateRecucerConfig,
+    initialState: S,
+    ...ons: ReducerTypes<S, ActionCreator[]>[]
+): R 
+```
 where
 
 | Param        | Description                                           |
