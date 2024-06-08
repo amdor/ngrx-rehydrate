@@ -1,6 +1,6 @@
 {
     "name": "ngrx-rehydrate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -43,8 +43,10 @@
         "dist/**/*"
     ],
     "dependencies": {
-        "18": "^0.0.0",
         "@ngrx/store": "^18.0.0-beta.1",
         "typescript": "^5.4.5"
+    },
+    "peerDependencies": {
+        "@ngrx/store": "^18.0.0-beta.1"
     }
 }
