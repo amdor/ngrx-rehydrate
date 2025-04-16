@@ -1,4 +1,5 @@
 # ngrx-rehydrate
+# moved to https://github.com/amdor/ng-poc-and-libs/tree/main/packages/ngrx-rehydrate
 
 Persists parts of the state to localStorage and automatically load them as initial state after refresh/revisit of the page.
 
